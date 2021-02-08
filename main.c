@@ -24,13 +24,15 @@ int main()
         printf("%f", num1 * num2);
     } else if(op == '/') {
         printf("%f", num1 / num2);
-    } else {
+    } else if(op == '^' && num2 > 0.0){
         int i = 1;
         double temp = num1;
         while(i++ < num2){
             temp *= num1;
         }
         printf("%f", temp);
+    } else {
+        printf("Operation not supported");
     }
 
     return 0;
